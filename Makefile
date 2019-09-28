@@ -1,6 +1,12 @@
-one:
-	$(CC) a.c
-clean:
-	echo "OK"
+OBJS=a.o
+TARGET = basic.a
 
-.PHONY: one clean
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+        $(AR) crv $@ $^
+
+clean:
+        rm -f $(TARGET) $(OBJS)
