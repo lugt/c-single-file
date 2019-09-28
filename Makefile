@@ -1,12 +1,12 @@
 OBJS=a.o
-TARGET = basic.a
+TARGET=basic.a
 
 .PHONY: all clean
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-        $(AR) crv $@ $^
+	$(AR) crv $@ $^
 
 clean:
-        rm -f $(TARGET) $(OBJS)
+	rm -f $(TARGET) $(OBJS)
